@@ -128,7 +128,32 @@ def run_search(config: dict) -> list[dict]:
 
 def _esc(s: str) -> str:
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+import re
 
+# Script che richiedono traduzione (rilevati tramite range Unicode)
+_TRANSLATE_PATTERNS = [
+    re.compile(r'[\u4e00-\u9fff\u3400-\u4dbf]'),   # Cinese (CJK)
+    re.compile(r'[\u3040-\u309f\u30a0-\u30ff]'),    # Giapponese (Hiragana/Katakana)
+    re.compile(r'[\uac00-\ud7af]'),                  # Coreano (Hangul)
+    re.compile(r'[\u0900-\u097f]'),                  # Sanscrito/Hindi (Devanagari)
+    re.compile(r'[\u0600-\u06ff]'),                  # Arabo
+    re.compile(r'[\u0400-\u04ff]'),                  # Russo/Cirillico
+]
+
+def translate_title(title: str) -> str:
+    """
+    Traduce il titolo in italiano se è scritto in cinese, giapponese,
+    coreano, sanscrito, arabo o russo. Lascia invariati tutti gli altri.
+    """
+    if not any(p.search(title) for p in _TRANSLATE_PATTERNS):
+        return title
+    try:
+        from deep_translator import GoogleTranslator
+        translated = GoogleTranslator(source="auto", target="it").translate(title)
+        return translated if translated else title
+    except Exception as e:
+        log.warning(f"Traduzione fallita per '{title}': {e}")
+        return title
 
 def generate_html(results: list[dict], generated_at: str) -> str:
     total = sum(len(r["videos"]) for r in results)
