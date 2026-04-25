@@ -133,7 +133,6 @@ def _esc(s: str) -> str:
 def generate_html(results: list[dict], generated_at: str) -> str:
     total = sum(len(r["videos"]) for r in results)
 
-    # Costruisci sezioni
     sections = []
     for r in results:
         topic = _esc(r["topic"])
@@ -146,7 +145,7 @@ def generate_html(results: list[dict], generated_at: str) -> str:
     </section>""")
             continue
 
-items = "\n".join(
+        items = "\n".join(
             f'      <li>'
             f'<a href="{_esc(v["url"])}" target="_blank" rel="noopener" class="video-link">'
             f'<img src="https://img.youtube.com/vi/{_esc(v["video_id"])}/mqdefault.jpg" '
@@ -204,39 +203,29 @@ items = "\n".join(
       padding-bottom: 8px; margin-bottom: 14px;
     }}
     .count {{ color: var(--muted); font-weight: 400; font-size: 0.85em; }}
-    ol {{ list-style: decimal; padding-left: 22px; }}
-    li {{
-      padding: 7px 0;
-      border-bottom: 1px solid #1a1a1a;
-      display: flex; flex-direction: column; gap: 2px;
-    }}
-    li:last-child {{ border-bottom: none; }}
-    .meta {{ font-size: 0.72rem; color: var(--muted); }}
-    a {{ color: var(--link); text-decoration: none; }}
-    a:hover {{ color: var(--link-hover); text-decoration: underline; }}
     .empty {{ color: var(--muted); font-style: italic; font-size: 0.88rem; }}
     footer {{
       text-align: center; padding: 24px;
       font-size: 0.78rem; color: var(--muted);
       border-top: 1px solid var(--border);
     }}
-    ol { list-style: none; padding-left: 0; }
-    li { border-bottom: 1px solid #1a1a1a; }
-    li:last-child { border-bottom: none; }
-    a.video-link {
+    ol {{ list-style: none; padding-left: 0; }}
+    li {{ border-bottom: 1px solid #1a1a1a; }}
+    li:last-child {{ border-bottom: none; }}
+    a.video-link {{
       display: flex; align-items: center; gap: 12px;
       padding: 10px 4px; text-decoration: none;
       transition: background 0.15s;
-    }
-    a.video-link:hover { background: #111; }
-    a.video-link img {
+    }}
+    a.video-link:hover {{ background: #111; }}
+    a.video-link img {{
       width: 100px; min-width: 100px;
       aspect-ratio: 16/9; object-fit: cover;
       border-radius: 4px; border: 1px solid #2a2a2a;
-    }
-    .video-info { display: flex; flex-direction: column; gap: 3px; }
-    .title { color: var(--link); font-size: 0.9rem; line-height: 1.4; }
-    a.video-link:hover .title { color: var(--link-hover); }
+    }}
+    .video-info {{ display: flex; flex-direction: column; gap: 3px; }}
+    .title {{ color: var(--link); font-size: 0.9rem; line-height: 1.4; }}
+    a.video-link:hover .title {{ color: var(--link-hover); }}
   </style>
 </head>
 <body>
@@ -255,8 +244,6 @@ items = "\n".join(
   </footer>
 </body>
 </html>"""
-
-
 # ══════════════════════════════════════════════════════════════
 # Entry point
 # ══════════════════════════════════════════════════════════════
