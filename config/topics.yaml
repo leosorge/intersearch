@@ -1,0 +1,21 @@
+# ============================================================
+# Topic da monitorare su YouTube
+# ============================================================
+# Ogni topic viene cercato con termini come:
+#   interview, keynote, speech, declaration, testimony, conference
+# in modo da filtrare interviste e dichiarazioni ufficiali,
+# escludendo commenti, reazioni e video brevi.
+# ============================================================
+
+topics:
+  - name: "chip"
+  - name: "photonics"
+  - name: "quantum"
+  - name: "wafer"
+
+settings:
+  # Risultati per topic (max 50, quota YouTube permette ~100 ricerche/giorno)
+  max_results_per_topic: 8
+
+  # Ordinamento: "relevance" | "date" | "viewCount" | "rating"
+  order: "relevance"
