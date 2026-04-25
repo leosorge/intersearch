@@ -1,114 +1,37 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YouTube Interview Monitor</title>
-  <style>
-    :root {
-      --bg: #0d0d0d; --surface: #161616; --border: #2a2a2a;
-      --accent: #e63946; --text: #e0e0e0; --muted: #666;
-      --link: #58a6ff; --link-hover: #79b8ff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg); color: var(--text);
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      font-size: 15px; line-height: 1.6;
-    }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 20px 32px;
-      display: flex; align-items: baseline; gap: 16px;
-    }
-    header h1 { font-size: 1.4rem; color: var(--accent); }
-    header .stats { font-size: 0.82rem; color: var(--muted); }
-    main { max-width: 900px; margin: 0 auto; padding: 32px 24px; }
-    section { margin-bottom: 40px; }
-    h2 {
-      font-size: 1rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .08em; color: var(--accent);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px; margin-bottom: 14px;
-    }
-    .count { color: var(--muted); font-weight: 400; font-size: 0.85em; }
-    .empty { color: var(--muted); font-style: italic; font-size: 0.88rem; }
-    footer {
-      text-align: center; padding: 24px;
-      font-size: 0.78rem; color: var(--muted);
-      border-top: 1px solid var(--border);
-    }
-    ol { list-style: none; padding-left: 0; }
-    li { border-bottom: 1px solid #1a1a1a; }
-    li:last-child { border-bottom: none; }
-    a.video-link {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 4px; text-decoration: none;
-      transition: background 0.15s;
-    }
-    a.video-link:hover { background: #111; }
-    a.video-link img {
-      width: 100px; min-width: 100px;
-      aspect-ratio: 16/9; object-fit: cover;
-      border-radius: 4px; border: 1px solid #2a2a2a;
-    }
-    .video-info { display: flex; flex-direction: column; gap: 3px; }
-    .title { color: var(--link); font-size: 0.9rem; line-height: 1.4; }
-    a.video-link:hover .title { color: var(--link-hover); }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>▶ YouTube Interview Monitor</h1>
-    <span class="stats">
-      Aggiornato: 2026-04-25 16:36 UTC &nbsp;·&nbsp; 16 video trovati
-    </span>
-  </header>
-  <main>
-
-    <section>
-      <h2>chip <span class="count">(8)</span></h2>
-      <ol>
-      <li><a href="https://www.youtube.com/watch?v=y7UXJzlgFM4" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/y7UXJzlgFM4/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; RiverBender.com</span><span class="title">Our Daily Show Interview! This Week in History W/Lacy: The Chip Industry 100 Years Ago</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=s4l1TANznBk" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/s4l1TANznBk/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; Bloomberg Podcasts</span><span class="title">Bloomberg News Now: Markets Close Higher, U.S. Envoy Headed to Pakistan, More</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=3y1pHZJt9iY" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/3y1pHZJt9iY/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; In The Money Media Network</span><span class="title">2026 KENTUCKY DERBY Monster Podcast | Intrepido | w/ Frank Scatoni</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=dqHuXNoymyY" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/dqHuXNoymyY/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; 항해경제TV</span><span class="title">케이씨에스주가전망, 양자컨퍼런스 양자칩 추가공급 발표 하겠네요 &amp;quot;중요&amp;quot;합니다ㅣ #케이씨에스주가전망 #케이씨에스주가 #케이씨에스</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=eL3dv2QKWlM" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/eL3dv2QKWlM/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; Capitol Uncut</span><span class="title">Trump Secy Lutnick CONFRONTED Over Anti Canada Comments: &amp;#39;They Won&amp;#39;t Do It Because Of The Insults&amp;#39;</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=vdh1HWQc4Nw" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/vdh1HWQc4Nw/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Bloomberg Podcasts</span><span class="title">Decoding Elon Musk: Beyond the Billionaire</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=CBNfHUhmdq8" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/CBNfHUhmdq8/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; KXAN</span><span class="title">Driverless - Austin&amp;#39;s AV Future</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=TGWdO4twqcI" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/TGWdO4twqcI/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; radiofun232</span><span class="title">Audio speech filter in the (say) 3 KC band, made with a UA 741 TC Chip final demo + schematic</span></span></a></li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>photonics <span class="count">(2)</span></h2>
-      <ol>
-      <li><a href="https://www.youtube.com/watch?v=6eCXHhSTelc" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/6eCXHhSTelc/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; ABC 7 Chicago</span><span class="title">LIVE: Pritzker speaks at Northwestern&amp;#39;s Inaugural Quantum Innovation Symposium</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=BNYq65oR0ow" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/BNYq65oR0ow/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; 미국주식 연구센터</span><span class="title">포엣 테크놀로지(POET) 주가 급등, 마벨(Marvell) 파트너십 효과?</span></span></a></li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>quantum <span class="count">(6)</span></h2>
-      <ol>
-      <li><a href="https://www.youtube.com/watch?v=jzQV4sIIG6Q" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/jzQV4sIIG6Q/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Quantum Shift News</span><span class="title">Your Energy Is Magic ⚡ | Here’s How to Use It &amp;amp; Change Your Life</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=7Ok3r_aOxyc" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/7Ok3r_aOxyc/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; Mathematically Proven</span><span class="title">Richard Feynman Said His Father Gave Him A Way Of Seeing That NO Physicist In The World Could Teach</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=scSKPMbGNwY" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/scSKPMbGNwY/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; The secrets of life</span><span class="title">Black Holes Broke Physics. We Still Haven&amp;#39;t Fixed It</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=-dezqqgrQF4" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/-dezqqgrQF4/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; 항해경제TV</span><span class="title">엑스게이트주가전망, 양자컨퍼런스 VPN 추가계약 발표 하겠네요 &amp;quot;중요&amp;quot;합니다ㅣ #엑스게이트주가전망 #엑스게이트주가 #엑스게이트</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=rn4pOcCj2uw" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/rn4pOcCj2uw/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Feynman Explains Physics</span><span class="title">Feynman,s Explains Time Is NOT What You Think… Physicists Are Terrified</span></span></a></li>
-      <li><a href="https://www.youtube.com/watch?v=DbbOFb7w_S0" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/DbbOFb7w_S0/mqdefault.jpg"      width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Psychology Decoded</span><span class="title">Napoleon hill Formula | 4am success secret reveal |#selfimprovement #motivation #napoleonhill </span></span></a></li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>wafer</h2>
-      <p class="empty">Nessun video trovato.</p>
-    </section>
-  </main>
-  <footer>
-    Generato automaticamente da YouTube Interview Monitor &mdash;
-    Dati: YouTube Data API v3
-  </footer>
-</body>
-</html>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>YouTube Interview Monitor</title>
+<style>:root{--bg:#0d0d0d;--surface:#161616;--border:#2a2a2a;--accent:#e63946;--text:#e0e0e0;--muted:#666;--link:#58a6ff;--link-hover:#79b8ff}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:15px;line-height:1.6}header{background:var(--surface);border-bottom:1px solid var(--border);padding:20px 32px;display:flex;align-items:baseline;gap:16px}header h1{font-size:1.4rem;color:var(--accent)}header .stats{font-size:.82rem;color:var(--muted)}main{max-width:900px;margin:0 auto;padding:32px 24px}section{margin-bottom:40px}h2{font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:14px}.count{color:var(--muted);font-weight:400;font-size:.85em}.empty{color:var(--muted);font-style:italic;font-size:.88rem}ol{list-style:none;padding-left:0}li{border-bottom:1px solid #1a1a1a}li:last-child{border-bottom:none}a.video-link{display:flex;align-items:center;gap:12px;padding:10px 4px;text-decoration:none;transition:background .15s}a.video-link:hover{background:#111}a.video-link img{width:100px;min-width:100px;aspect-ratio:16/9;object-fit:cover;border-radius:4px;border:1px solid #2a2a2a;flex-shrink:0}.video-info{display:flex;flex-direction:column;gap:3px}.meta{font-size:.72rem;color:var(--muted)}.title{color:var(--link);font-size:.9rem;line-height:1.4}a.video-link:hover .title{color:var(--link-hover)}footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);border-top:1px solid var(--border)}</style>
+</head><body>
+<header>
+<h1>&#9654; YouTube Interview Monitor</h1>
+<span class="stats">Aggiornato: 2026-04-25 16:49 UTC &nbsp;&middot;&nbsp; 16 video trovati</span>
+</header>
+<main><section><h2>chip <span class='count'>(8)</span></h2><ol>
+<li><a href="https://www.youtube.com/watch?v=y7UXJzlgFM4" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/y7UXJzlgFM4/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; RiverBender.com</span><span class="title">Our Daily Show Interview! This Week in History W/Lacy: The Chip Industry 100 Years Ago</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=dqHuXNoymyY" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/dqHuXNoymyY/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; 항해경제TV</span><span class="title">Prospettive azionarie KCS, conferenza quantistica Sarà annunciata una fornitura aggiuntiva di chip quantistici &quot;Importante&quot; #Prospettive azioni KCS #Prezzo azioni KCS #KCS</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=3y1pHZJt9iY" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/3y1pHZJt9iY/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; In The Money Media Network</span><span class="title">2026 KENTUCKY DERBY Monster Podcast | Intrepido | w/ Frank Scatoni</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=s4l1TANznBk" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/s4l1TANznBk/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; Bloomberg Podcasts</span><span class="title">Bloomberg News Now: Markets Close Higher, U.S. Envoy Headed to Pakistan, More</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=eL3dv2QKWlM" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/eL3dv2QKWlM/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; Capitol Uncut</span><span class="title">Trump Secy Lutnick CONFRONTED Over Anti Canada Comments: &amp;#39;They Won&amp;#39;t Do It Because Of The Insults&amp;#39;</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=6tLvzJidNjM" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/6tLvzJidNjM/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; AlgoWars</span><span class="title">China Just Released DeepSeek V4. The AI War Is Over.</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=TGWdO4twqcI" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/TGWdO4twqcI/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; radiofun232</span><span class="title">Audio speech filter in the (say) 3 KC band, made with a UA 741 TC Chip final demo + schematic</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=CBNfHUhmdq8" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/CBNfHUhmdq8/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; KXAN</span><span class="title">Driverless - Austin&amp;#39;s AV Future</span></span></a></li>
+</ol></section>
+<section><h2>photonics <span class='count'>(2)</span></h2><ol>
+<li><a href="https://www.youtube.com/watch?v=6eCXHhSTelc" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/6eCXHhSTelc/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; ABC 7 Chicago</span><span class="title">LIVE: Pritzker speaks at Northwestern&amp;#39;s Inaugural Quantum Innovation Symposium</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=BNYq65oR0ow" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/BNYq65oR0ow/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; 미국주식 연구센터</span><span class="title">Il prezzo delle azioni di POET Technology (POET) sale alle stelle, effetto partnership Marvell?</span></span></a></li>
+</ol></section>
+<section><h2>quantum <span class='count'>(6)</span></h2><ol>
+<li><a href="https://www.youtube.com/watch?v=jzQV4sIIG6Q" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/jzQV4sIIG6Q/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Quantum Shift News</span><span class="title">Your Energy Is Magic ⚡ | Here’s How to Use It &amp;amp; Change Your Life</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=7Ok3r_aOxyc" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/7Ok3r_aOxyc/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-24 &mdash; Mathematically Proven</span><span class="title">Richard Feynman Said His Father Gave Him A Way Of Seeing That NO Physicist In The World Could Teach</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=scSKPMbGNwY" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/scSKPMbGNwY/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; The secrets of life</span><span class="title">Black Holes Broke Physics. We Still Haven&amp;#39;t Fixed It</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=-dezqqgrQF4" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/-dezqqgrQF4/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; 항해경제TV</span><span class="title">Prospettive azionarie di Xgate, annunceremo un contratto aggiuntivo per la VPN per conferenze quantistiche. È &amp;quot;importante&amp;quot; Prospettive azioni #Xgate #Prezzo delle azioni #Xgate #Xgate</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=rn4pOcCj2uw" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/rn4pOcCj2uw/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Feynman Explains Physics</span><span class="title">Feynman,s Explains Time Is NOT What You Think… Physicists Are Terrified</span></span></a></li>
+<li><a href="https://www.youtube.com/watch?v=DbbOFb7w_S0" target="_blank" rel="noopener" class="video-link"><img src="https://img.youtube.com/vi/DbbOFb7w_S0/mqdefault.jpg" width="100" alt="" loading="lazy"/><span class="video-info"><span class="meta">2026-04-25 &mdash; Psychology Decoded</span><span class="title">Napoleon hill Formula | 4am success secret reveal |#selfimprovement #motivation #napoleonhill </span></span></a></li>
+</ol></section>
+<section><h2>wafer</h2><p class='empty'>Nessun video nelle ultime 24 ore.</p></section></main>
+<footer>Generato automaticamente &mdash; YouTube Data API v3</footer>
+</body></html>
