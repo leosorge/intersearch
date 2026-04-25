@@ -49,8 +49,12 @@ def build_query(topic: str) -> str:
 
 def search_topic(youtube, topic: str, max_results: int, order: str) -> list[dict]:
     """Cerca video per un singolo topic. Ritorna lista di dict video."""
+    from datetime import timedelta
     query = build_query(topic)
     log.info(f"Ricerca: {query!r}")
+
+    # Calcola 24 ore fa in formato RFC 3339 (richiesto dall'API)
+    published_after = (datetime.now(timezone.utc) - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     try:
         resp = youtube.search().list(
@@ -59,8 +63,9 @@ def search_topic(youtube, topic: str, max_results: int, order: str) -> list[dict
             type="video",
             maxResults=max_results,
             order=order,
-            videoDuration="medium",   # esclude clip <4 min (più spesso commenti/reazioni)
+            videoDuration="medium",
             relevanceLanguage="en",
+            publishedAfter=published_after,
         ).execute()
     except HttpError as e:
         log.error(f"Errore API YouTube per topic '{topic}': {e}")
@@ -79,7 +84,6 @@ def search_topic(youtube, topic: str, max_results: int, order: str) -> list[dict
             "thumb":      (s.get("thumbnails", {}).get("medium") or {}).get("url", ""),
         })
     return videos
-
 
 def run_search(config: dict) -> list[dict]:
     """
