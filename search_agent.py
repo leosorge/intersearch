@@ -141,18 +141,16 @@ _TRANSLATE_PATTERNS = [
 ]
 
 def translate_title(title: str) -> str:
-    """
-    Traduce il titolo in italiano se è scritto in cinese, giapponese,
-    coreano, sanscrito, arabo o russo. Lascia invariati tutti gli altri.
-    """
     if not any(p.search(title) for p in _TRANSLATE_PATTERNS):
         return title
+    log.info(f"[TRANSLATE] rilevato script non-latino: {title[:60]}")
     try:
         from deep_translator import GoogleTranslator
         translated = GoogleTranslator(source="auto", target="it").translate(title)
+        log.info(f"[TRANSLATE] risultato: {translated[:60]}")
         return translated if translated else title
     except Exception as e:
-        log.warning(f"Traduzione fallita per '{title}': {e}")
+        log.warning(f"[TRANSLATE] fallita: {e}")
         return title
 
 def generate_html(results: list[dict], generated_at: str) -> str:
