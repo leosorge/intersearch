@@ -15,6 +15,7 @@ import os
 import sys
 import yaml
 import logging
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from dotenv import load_dotenv
@@ -128,7 +129,6 @@ def run_search(config: dict) -> list[dict]:
 
 def _esc(s: str) -> str:
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
-import re
 
 # Script che richiedono traduzione (rilevati tramite range Unicode)
 _TRANSLATE_PATTERNS = [
